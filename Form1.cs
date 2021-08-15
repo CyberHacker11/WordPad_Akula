@@ -179,5 +179,10 @@ namespace WordPad
         {
             e.Graphics.DrawString(richTextBox1.Text, richTextBox1.Font, Brushes.Black, 150, 125);
         }
+        
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S) tsm_Save_Click(this, e);
+        }
     }
 }
